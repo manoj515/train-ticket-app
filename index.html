@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RailBook - Train Tickets</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🚆 RailBook</h1>
+        <p>Book your train journey</p>
+    </header>
+
+    <main>
+
+        <section class="search-box">
+            <h2>Search Trains</h2>
+
+            <div class="form-grid">
+
+                <div>
+                    <label>From</label>
+                    <input type="text" id="from" placeholder="e.g. Hyderabad">
+                </div>
+
+                <div>
+                    <label>To</label>
+                    <input type="text" id="to" placeholder="e.g. Chennai">
+                </div>
+
+                <div>
+                    <label>Journey Date</label>
+                    <input type="date" id="date">
+                </div>
+
+                <div>
+                    <label>Passengers</label>
+                    <select id="passengers">
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button onclick="searchTrains()">Search Trains</button>
+        </section>
+
+        <section id="results" class="results">
+
+            <h2>Available Trains</h2>
+
+            <div class="train-card">
+
+                <div>
+                    <h3>🚆 Deccan Express</h3>
+                    <p>Hyderabad → Chennai</p>
+                </div>
+
+                <div>
+                    <strong>06:30 AM</strong>
+                    <p>8h 30m</p>
+                    <strong>03:00 PM</strong>
+                </div>
+
+                <div>
+                    <p>₹850 / person</p>
+
+                    <button onclick="bookTrain('Deccan Express')">
+                        Book Now
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="train-card">
+
+                <div>
+                    <h3>🚆 South Star Express</h3>
+                    <p>Hyderabad → Chennai</p>
+                </div>
+
+                <div>
+                    <strong>09:00 PM</strong>
+                    <p>9h 15m</p>
+                    <strong>06:15 AM</strong>
+                </div>
+
+                <div>
+                    <p>₹1,100 / person</p>
+
+                    <button onclick="bookTrain('South Star Express')">
+                        Book Now
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 RailBook</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
